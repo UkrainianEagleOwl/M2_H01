@@ -59,7 +59,6 @@ class AddressBook(UserDict):
         for user_info in birthday_users:
             table.add_row([user_info['day'], user_info['user_name'],
                            user_info['user_phones'], user_info['user_birthday']])
-        print(table)
         return table
 
     def add_record(self, aRecord):
@@ -162,11 +161,12 @@ class AddressBook(UserDict):
 
 class Field():
     # Base class representing a field
+
     def __eq__(self, other):
         if isinstance(other, Field):
             return self.value == other.value
         return False
-
+    
     def __init__(self, new_value = ''):
         # Constructor to initialize the field with a value
         self._value = new_value
@@ -370,19 +370,22 @@ class Record():
         if isinstance(other, Record):
             return self.user_name.value == other.user_name.value
         return False
-
-    def __str__(self):
-        table = PrettyTable()
-        table.field_names = ['Name', 'Phones', 'Birthday', 'Email', 'Address']
-        phone_numbers = ', '.join(str(phone) for phone in self.user_phones)
-        table.add_row([
-            self.user_name,
-            phone_numbers,
-            self.user_birthday,
-            self.user_email,
-            self.user_address
-        ])
-        return str(table)
+    
+    # def __repr__(self) -> str:
+    #     return f'Record: {self.value}'
+    
+    # def __str__(self):
+    #     table = PrettyTable()
+    #     table.field_names = ['Name', 'Phones', 'Birthday', 'Email', 'Address']
+    #     phone_numbers = ', '.join(str(phone) for phone in self.user_phones)
+    #     table.add_row([
+    #         self.user_name,
+    #         phone_numbers,
+    #         self.user_birthday,
+    #         self.user_email,
+    #         self.user_address
+    #     ])
+    #     return str(table)
     
     def to_dict(self):
         # create dictionary based on class record

@@ -35,7 +35,7 @@ class Note:
         tags_str = ""
         if self.tags:
             tags_str = ", ".join(tag.name for tag in self.tags)
-        return "Title: {}\nTags: {}\nDescription: {}".format(self.title, tags_str, self.description)
+        return "Note: (Title: {}Tags: {}Description: {})".format(self.title, tags_str, self.description)
     
     def change_note_info(self,change_field, new_info):
         if change_field == 'tag':
@@ -63,12 +63,6 @@ class Notebook:
                 matching_notes.append(note)
         for matching_note in matching_notes:
             self.notes.remove(matching_note)
-
-    def show_notes(self):
-        if not self.notes:
-            return "Notebook is empty."
-        else:
-            return self.put_notes_in_stringlist(self.notes)
     
     @staticmethod
     def put_notes_in_stringlist(notes):
@@ -82,7 +76,7 @@ class Notebook:
             i +=1
         return table
 
-    def search_notes_by_tag(self, tag_name):
+    def  search_notes_by_tag(self, tag_name):
         matching_notes = []
         for note in self.notes:
             for tag in note.tags:
@@ -90,7 +84,7 @@ class Notebook:
                     matching_notes.append(note)
                     # Stop check, if tag in found in note
                     break
-        return self.put_notes_in_stringlist(matching_notes)
+        return matching_notes
 
     def search_notes_by_title(self,title):
         for note in self.notes:
