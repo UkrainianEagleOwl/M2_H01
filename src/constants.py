@@ -1,11 +1,61 @@
+from colorama import Fore, Style
 
-from colorama import Fore,Style
-
-input_variants = ['hello','hi','start','add contact','new contact','create contact','change contact','change phone','change contact details',"sort","sort files","need sort",
-                  'get contact', 'show contact','show person','show contacts','show address book','show all book','goodbye','close','end','search user','find contact','find user', "help","commands",
-                  "need help",'remove note','delete note','get note out','add note', 'new note','create note','find notes', 'search notes','remove contact','delete contact','take out contact'
-                  ,"edit note", "change note", "search by tag","sort by tag",'show all notes','show notebook','show notes','give me note',"find by tag","give me note by tag"
-                  ,"tag sorting","notebook sort by tag","remake note", 'game', 'play', 'fun']
+input_variants = [
+    "hello",
+    "hi",
+    "start",
+    "add contact",
+    "new contact",
+    "create contact",
+    "change contact",
+    "change phone",
+    "change contact details",
+    "sort",
+    "sort files",
+    "need sort",
+    "get contact",
+    "show contact",
+    "show person",
+    "show contacts",
+    "show address book",
+    "show all book",
+    "goodbye",
+    "close",
+    "end",
+    "search user",
+    "find contact",
+    "find user",
+    "help",
+    "commands",
+    "need help",
+    "remove note",
+    "delete note",
+    "get note out",
+    "add note",
+    "new note",
+    "create note",
+    "find notes",
+    "search notes",
+    "remove contact",
+    "delete contact",
+    "take out contact",
+    "edit note",
+    "change note",
+    "search by tag",
+    "sort by tag",
+    "show all notes",
+    "show notebook",
+    "show notes",
+    "give me note",
+    "find by tag",
+    "give me note by tag",
+    "tag sorting",
+    "notebook sort by tag",
+    "remake note",
+    "game",
+    "play",
+    "fun",
+]
 
 STR_EPIC_COMMANDS = """ 
   ______                                                                   __           
@@ -18,7 +68,7 @@ $$ \__/  |$$ \__$$ |$$ | $$ | $$ |$$ | $$ | $$ |/$$$$$$$ |$$ |  $$ |$$ \__$$ | $
 $$    $$/ $$    $$/ $$ | $$ | $$ |$$ | $$ | $$ |$$    $$ |$$ |  $$ |$$    $$ |/     $$/ 
  $$$$$$/   $$$$$$/  $$/  $$/  $$/ $$/  $$/  $$/  $$$$$$$/ $$/   $$/  $$$$$$$/ $$$$$$$/   
  -----------------------------------------------------------------------------------------                                                                                                                                                                                                                                                                    
-"""             
+"""
 
 
 STR_EPIC_ASSISTANT = f'''
@@ -37,5 +87,5 @@ STR_EPIC_ASSISTANT = f'''
     /jgs::::::::|/::\/:\|:::::\   {Fore.GREEN}With these features, I aim to make your life easier and help you stay on top of your contacts, reminders, notes, and files. How can I assist you today?{Style.RESET_ALL}
 '''
 
-CHECK_SECOND_ARG_CHANGE_CONTACT = ("phone","email","birthday","address")
-CHECK_SECOND_ARG_CHANGE_NOTE = ("title","tag","description")
+CHECK_SECOND_ARG_CHANGE_CONTACT = ("phone", "email", "birthday", "address")
+CHECK_SECOND_ARG_CHANGE_NOTE = ("title", "tag", "description")

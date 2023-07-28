@@ -1,21 +1,34 @@
-[project]
-name = "jarvis_assistant_bot"
+[tool.poetry]
+name = "j_bot"
 version = "1.4"
 authors = [
-  { name="Dmytro Filin"},
-  { name="Illya Grygoriev"},
-  { name="Dmytro Klymenko"},
-  { name="Dmytro Paukov"},
-  { name="Alexandr "}
+  "Dmytro Filin",
+  "Illya Grygoriev",
+  "Dmytro Klymenko",
+  "Dmytro Paukov",
+  "Alexandr"
 ]
 description = "Jarvis is a personal assistant application that allows you to manage your address book with contacts. The application provides features to add, remove, change, save, and load contacts, making it easier to organize your personal or professional network. In addition, Jarvis integrates with ChatGPT, an AI language model, to provide interactive chat functionality. And to add some entertainment after a hard working day, Jarvis also includes a fun game about Bandera-goose."
 readme = "README.md"
-requires-python = ">=3.7"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+prettytable = "^3.8.0"
+prompt_toolkit = "^3.0.39"
+colorama = "^0.4.6"
+cryptography = "^41.0.2"
+openai = "^0.27.8"
+keyboard = "^0.13.5"
+pygame = "^2.5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [project.urls]
 "Homepage" = "https://github.com/UkrainianEagleOwl/tp_personal_assistant"

@@ -60,3 +60,9 @@ build/lib/tests/notes_core_tests.py
 build/lib/tests/save_load_tests.py
 dist/jarvis_assistant_bot-1.4-py3-none-any.whl
 dist/jarvis_assistant_bot-1.4.tar.gz
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/M2_H01.iml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/workspace.xml

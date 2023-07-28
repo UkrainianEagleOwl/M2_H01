@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='jarvis_assistant_bot',
+    name='j_bot',
     version='1.4',
     description='Welcome to Jarvis, your personal assistant! Jarvis is here to help you stay organized and manage your contacts, reminders, notes, and files efficiently.',
     author='Python Forces',
